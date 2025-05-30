@@ -21,7 +21,7 @@ class Speech:
 
 class Recognize:
     def __init__(self, path):
-        model = vosk.Model('C:/Users/User/PycharmProjects/Lab-10/vosk-model-small-ru-0.22')
+        model = vosk.Model('./vosk-model-small-ru-0.22')
         self.record = vosk.KaldiRecognizer(model, 16000)
         self.stream()
 
@@ -78,7 +78,7 @@ def speak(text):
 
 
 if __name__ == "__main__":
-    rec = Recognize("C:/Users/User/PycharmProjects/Lab-10/vosk-model-small-ru-0.22")
+    rec = Recognize("./vosk-model-small-ru-0.22")
     text_gen = rec.listen()
     rec.stream.stop_stream()
     speak(
