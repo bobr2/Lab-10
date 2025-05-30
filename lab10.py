@@ -96,8 +96,8 @@ if __name__ == "__main__":
                 speak("До скорых встреч!")
                 quit()
             case "факт":
-                speak("До скорых встреч!")
-                quit()
+                fact = get_fact()
+                speak(f"Ваш факт: {fact}")
             case "следующий":
                 fact = get_fact()
                 speak(f"Ваш новый факт: {fact}")
@@ -119,3 +119,5 @@ if __name__ == "__main__":
                 speak(result)
             case _:
                 speak("Команда не распознана. Пожалуйста, попробуйте снова.")
+
+
